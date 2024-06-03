@@ -1,5 +1,5 @@
 function preload(){  //我的圖片檔
-  carImg= loadImage("https://hackmd.io/_uploads/rkncXiYVR.gif")
+  carImg= loadImage("車車.gif")
   }
   
   let video, bodypose, pose, keypoint, detector;
