@@ -141,4 +141,3 @@ function preload(){  //我的圖片檔
     15 left foot
     16 right foot
   */
-  
