@@ -70,6 +70,19 @@ function preload(){  //我的圖片檔
           text("412730706,羅小璇",partA.x-width,partA.y-150)  //我的名字
         pop()
       }
+
+      for (j = 1; j < 3; j++) {
+        if (pose.keypoints[j].score > 0.1) {
+          let eyeX = pose.keypoints[j].x;
+          let eyeY = pose.keypoints[j].y;
+          let moveAmount = sin(frameCount * 0.05) * 10; // 控制移動量的因素
+          
+          push();
+          translate(eyeX, eyeY);
+          image(carImg, -75 + moveAmount, -75, 150, 150); // -75 是為了讓圖片中心對齊眼睛的位置
+          pop();
+        }
+      }
      
       for (j = 5; j < 9; j++) {
         if (pose.keypoints[j].score > 0.1 && pose.keypoints[j + 2].score > 0.1) {
